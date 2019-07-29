@@ -48,7 +48,7 @@
         <!--Add New Photo-->
         <scene sceneID="7vi-tZ-gWe">
             <objects>
-                <viewController id="OHR-e9-D0F" sceneMemberID="viewController">
+                <viewController id="OHR-e9-D0F" customClass="AddPhotoViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q35-wE-Sz5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,10 +56,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skF-Ye-xvO">
                                 <rect key="frame" x="61" y="493" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="CameraAction:" destination="OHR-e9-D0F" eventType="touchUpInside" id="M91-dp-Li3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH7-9J-hG5">
                                 <rect key="frame" x="161" y="510" width="92" height="30"/>
                                 <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="PhotoLibraryTapped:" destination="OHR-e9-D0F" eventType="touchUpInside" id="eR2-og-HSL"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Wd-hH-Y0H">
                                 <rect key="frame" x="95" y="278" width="224" height="225"/>
@@ -77,6 +83,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9N-Sy-sdX">
                                 <rect key="frame" x="302" y="492" width="92" height="30"/>
                                 <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="AlbumsTapped:" destination="OHR-e9-D0F" eventType="touchUpInside" id="VBS-Uq-w15"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
